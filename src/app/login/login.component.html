@@ -1,0 +1,38 @@
+<div class="row">
+  <form [formGroup] = "form" (ngSubmit)="login()" class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <mz-input-container>
+          <input mz-input
+          label="Email"
+          name="email" 
+          type="email"
+          formControlName="email"
+          >
+        </mz-input-container>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <mz-input-container>
+          <input mz-input
+            label="Password"
+            name="password" 
+            type="password"
+            formControlName="password"
+          >
+        </mz-input-container>
+      </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+          <button 
+            mz-button class="btn waves-effect waves-light">
+            Submit<i mz-icon-mdi
+            icon ="send" align="right"></i> 
+          </button>
+        </div>
+      </div>
+    
+  </form>
+</div>
