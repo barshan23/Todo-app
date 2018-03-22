@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HttpErrorResponse } from '@angular/common/http';
 
 import { HttpService } from './../http.service';
@@ -13,16 +13,23 @@ import { User } from './../user';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  form = new FormGroup({
-   email: new FormControl(),
-   password: new FormControl()
-  });
+  form : FormGroup;
 
   constructor(
-    private http: HttpService
-  ) { }
+    private http: HttpService,
+    private fb: FormBuilder
+  ) { 
+    this.createForm();
+  }
 
   ngOnInit() {
+  }
+
+  createForm(){
+    this.form = this.fb.group({
+      password: [ '', [Validators.required, Validators.minLength(8)] ],
+      email: [ '', [Validators.required, Validators.minLength(7)]]
+    });
   }
 
   login(){

@@ -17,22 +17,28 @@ import {
   MzInputModule,
   MzButtonModule,
   MzIconModule,
-  MzIconMdiModule
+  MzIconMdiModule,
+  MzCollectionModule,
+  MzCheckboxModule
 } from 'ng2-materialize';
+import { TodosComponent } from './todos/todos.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    TodosComponent
   ],
   imports: [
     BrowserModule,
+    MzCheckboxModule,
     HttpClientModule,
     MzInputModule,
     MzButtonModule,
     MzIconModule,
     MzIconMdiModule,
+    MzCollectionModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),

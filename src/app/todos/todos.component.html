@@ -1,0 +1,16 @@
+<mz-collection>
+  <mz-collection-item *ngFor='let todo of todos;let i = index' style="position: relative;">
+    <span>{{ todo.text}}</span>
+    <i mz-icon-mdi *ngIf="todo.complete" style="position: absolute; left: 87%; color:#00ff00;" 
+    icon="check">
+    </i>
+    <button mz-button style="display: inline-block; position: absolute; left: 80%; top:9%;"
+      *ngIf='!todo.complete'
+      [flat]="true"
+      (click)="complete(i)" >
+        <i mz-icon-mdi
+        icon="check">
+        </i>
+    </button>
+  </mz-collection-item>
+</mz-collection>
