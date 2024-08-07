@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "475c50d7-ac9c-4b90-9e0a-b9d077c1fa44",
+		"name": "Swagger Petstore",
+		"description": "Multi-file boilerplate for OpenAPI Specification.\n\nContact Support:\n Name: API Support ghp_iFVHxrjNCbA3vsZNcogHQQJp8W70tK1e3VJJ\n Email: support@example.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "7165352-475c50d7-ac9c-4b90-9e0a-b9d077c1fa44"
+	},
+	"item": [
+		{
+			"name": "pets",
+			"item": [
+				{
+					"name": "New Request",
+					"id": "e5571a78-f12e-448b-9f08-01a7e9bc8b96",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "a",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/:a?a&b",
+							"path": [
+								":a"
+							],
+							"query": [
+								{
+									"key": "a",
+									"value": null
+								},
+								{
+									"key": "b",
+									"value": null
+								}
+							],
+							"variable": [
+								{
+									"key": "a",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "665ebeed-7642-44f6-a9a0-d4d49fc8ec36"
+		}
+	],
+	"variable": [
+		{
+			"id": "024131e6-d580-4e55-a781-752cc70c6690",
+			"key": "baseUrl",
+			"value": "http://petstore.swagger.io/v1"
+		}
+	]
+}
